@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/RelativeLayout1"
+    android:layout_width="fill_parent"
+    android:layout_height="100dp"
+    android:orientation="vertical" >
+
+    <ViewFlipper
+        android:id="@+id/viewFlipper"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:addStatesFromChildren="true"
+        android:gravity="center" >
+
+        <ImageView
+            android:id="@+id/image_IV"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:cropToPadding="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/sample_0" />
+        
+        <ImageView
+            android:id="@+id/back_image_IV"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:clickable="true"
+            android:gravity="center"
+            android:scaleType="centerCrop"
+            android:src="@drawable/back_image" />
+
+    </ViewFlipper>
+
+    <TextView
+        android:id="@+id/time_TV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/viewFlipper"
+        android:layout_centerHorizontal="true"
+        android:text="12:00:00"
+        android:textSize="15sp"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/category_name_TV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="#49000000"
+        android:paddingBottom="3dp"
+        android:paddingLeft="5dp"
+        android:paddingTop="3dp"
+        android:text="Gadgets"
+        android:textColor="@android:color/white"
+        android:textSize="10sp" />
+
+</RelativeLayout>

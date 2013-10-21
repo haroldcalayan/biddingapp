@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/RelativeLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/category_name_TV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:text="TextView"
+        android:textSize="12sp" />
+
+    <GridView
+        android:id="@+id/category_GV"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_below="@+id/category_name_TV"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:horizontalSpacing="2dp"
+        android:numColumns="2"
+        android:verticalSpacing="2dp"
+        android:visibility="visible" >
+    </GridView>
+
+    <ViewFlipper
+        android:id="@+id/viewflipper_for_largeview_VF"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_below="@+id/category_name_TV"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:visibility="gone" >
+
+        <ImageView
+            android:id="@+id/show_IV"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_gravity="center|center_vertical"
+            android:cropToPadding="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/sample_0" />
+        
+        <ImageView  
+			android:id="@+id/back_image_for_largeview_IV" 			
+			android:src="@drawable/back_image"
+			android:layout_width="match_parent"
+			android:layout_height="200dp" 
+			android:scaleType="centerCrop"
+	    	android:gravity="center" />
+    </ViewFlipper>
+
+    <ImageView
+        android:id="@+id/gt_IV"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="5dp"
+        android:src="@drawable/gt"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/lt_IV"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="5dp"
+        android:src="@drawable/lt"
+        android:visibility="gone" />
+
+</RelativeLayout>
